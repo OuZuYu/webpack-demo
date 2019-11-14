@@ -24,6 +24,21 @@ module.exports = {
           ]
         })
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              // 限制图片大小为 10000B，小于将会把图片转换为 base64格式
+              limit: 10000,
+
+              // images/[图片名].[hash].[图片格式]
+              name: 'images/[name].[hash].[ext]'
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [
