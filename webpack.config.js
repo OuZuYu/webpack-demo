@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
@@ -45,7 +46,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html'
     }),
-    new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin('index.css'),
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify('1.0.0')
+    })
   ],
   resolve: {
     alias: {
