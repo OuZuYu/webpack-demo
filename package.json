@@ -19,6 +19,7 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "lodash.get": "^4.4.2",
     "lodash.throttle": "^4.1.1"
   }
 }

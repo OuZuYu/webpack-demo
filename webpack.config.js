@@ -58,5 +58,10 @@ module.exports = {
     alias: {
       '#': path.resolve(__dirname, 'styles')
     }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'initial' // all || initial 都可分离出 入口文件中的 'lodash.get' 参考： https://www.cnblogs.com/kwzm/p/10314438.html
+    }
   }
 }

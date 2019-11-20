@@ -1,3 +1,4 @@
+import _get from 'lodash.get'
 import '#/index.less'
 console.log(_throttle)
 alert('我被打包了')
