@@ -49,6 +49,9 @@ module.exports = {
     new ExtractTextPlugin('index.css'),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify('1.0.0')
+    }),
+    new webpack.ProvidePlugin({
+      _throttle: ['lodash', 'throttle']
     })
   ],
   resolve: {

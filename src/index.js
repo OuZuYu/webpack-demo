@@ -1,4 +1,5 @@
 import '#/index.less'
+console.log(_throttle)
 alert('我被打包了')
 alert(`我是常量 VERSION：${VERSION}`)
 

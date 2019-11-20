@@ -17,5 +17,8 @@
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
   }
 }
