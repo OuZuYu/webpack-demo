@@ -6,7 +6,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 module.exports = {
   entry: './src/index',
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -62,6 +63,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'initial' // all || initial 都可分离出 入口文件中的 'lodash.get' 参考： https://www.cnblogs.com/kwzm/p/10314438.html
-    }
+    },
+    runtimeChunk: true
   }
 }
