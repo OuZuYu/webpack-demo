@@ -40,6 +40,17 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.html/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: path.resolve('./build/h2m-loader')
+          }
+        ]
       }
     ],
   },
